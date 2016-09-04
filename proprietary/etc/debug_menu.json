@@ -1,0 +1,121 @@
+[
+    {
+                "title": "Menu",
+                "menu": [
+                    {
+		                "title": "Debug Menu",
+		                "menu": [
+		                 {
+		                	"title": "Ambient Light Sensor",
+		                	"menu": [
+		                     {
+		                	 "title": "ALSDisable",
+		                	 "command":"als --a 0",
+		                	 "menu": [
+		                    	{}
+		                	  ]
+		            		 },
+		            		 {
+		            		 "title": "ALSEnable",
+		                	 "command":"als --a 1",
+		                	 "menu": [
+		                    	{}
+		                	  ]
+		            		 },
+		            		 {
+		            		 "title": "ALSDisplayValues",
+		                	 "command":"als --a 2",
+		                	 "menu": [
+		                    	{}
+		                	  ]
+		            		 }
+		                   ]
+		            	 },
+		            	 {
+		                	"title": "BT",
+		                	"menu": [
+		                     {
+		                	 "title": "BTDisable",
+		                	 "command":"bt -a 0",
+		                	 "menu": [
+		                    	{}
+		                	  ]
+		            		 },
+		            		 {
+		            		 "title": "BTEnable",
+		                	 "command":"bt -a 1",
+		                	 "menu": [
+		                    	{}
+		                	  ]
+		            		 },
+		            		 {
+		            		 "title": "BTGetDeviceList",
+		                	 "command":"bt -a 6",
+		                	 "menu": [
+		                    	{}
+		                	  ]
+		            		 }
+		                   ]
+		            	 }
+		                ]
+		            },
+		            {
+		                "title": "Desense Menu",
+		                "menu": [
+		                 {
+		                	"title": "Ambient Light Sensor",
+		                	"menu": [
+		                     {
+		                	 "title": "ALSDisable",
+		                	 "command":"als --a 0",
+		                	 "menu": [
+		                    	{}
+		                	  ]
+		            		 },
+		            		 {
+		            		 "title": "ALSEnable",
+		                	 "command":"als --a 1",
+		                	 "menu": [
+		                    	{}
+		                	  ]
+		            		 },
+		            		 {
+		            		 "title": "ALSDisplayValues",
+		                	 "command":"als --a 2",
+		                	 "menu": [
+		                    	{}
+		                	  ]
+		            		 }
+		                   ]
+		            	 },
+		            	 {
+		                	"title": "BT",
+		                	"menu": [
+		                     {
+		                	 "title": "BTDisable",
+		                	 "command":"bt -a 0",
+		                	 "menu": [
+		                    	{}
+		                	  ]
+		            		 },
+		            		 {
+		            		 "title": "BTEnable",
+		                	 "command":"bt -a 1",
+		                	 "menu": [
+		                    	{}
+		                	  ]
+		            		 },
+		            		 {
+		            		 "title": "BTGetDeviceList",
+		                	 "command":"bt -a 4",
+		                	 "menu": [
+		                    	{}
+		                	  ]
+		            		 }
+		                   ]
+		            	 }
+		                ]
+		            }
+                ]
+            }
+ ]

@@ -1,2 +1,2 @@
 PRODUCT_MAKEFILES := \
-    $(LOCAL_DIR)/device_tetra.mk
+    $(LOCAL_DIR)/device.mk

@@ -1,0 +1,22 @@
+on init
+    setenforce 0
+
+on charger
+    mount_all /fstab.tetra
+
+on fs
+    mount_all /fstab.tetra
+    swapon_all /fstab.swap.tetra
+
+    # Allow in-swapping of single pages (cheap with zram)
+    write /proc/sys/vm/page-cluster 0
+
+service nfctagmodify /system/bin/T2tNdefWrite
+    user nfc
+    disabled
+    oneshot
+
+on property:dev.bootcomplete=1
+    start nfctagmodify
+
+import /init.common.rc

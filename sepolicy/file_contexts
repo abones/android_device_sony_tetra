@@ -1,0 +1,71 @@
+# GPU
+/dev/mm_v3d                     u:object_r:gpu_device:s0
+/dev/mm_interlock               u:object_r:gpu_device:s0
+
+# Console
+/dev/ttyS0                      u:object_r:console_device:s0
+
+# Bluetooth
+/dev/ttyS1                      u:object_r:hci_attach_dev:s0
+
+# GPS
+/dev/ttyS2                      u:object_r:gps_device:s0
+
+# NFC
+/dev/bcm2079x                   u:object_r:nfc_device:s0
+
+# Radio
+/dev/bcm_log                    u:object_r:radio_device:s0
+/dev/bcm_irpc                   u:object_r:radio_device:s0
+
+# Block devices
+/dev/block/mmcblk0p26           u:object_r:ta_block_device:s0
+/dev/block/mmcblk0p30           u:object_r:cache_block_device:s0
+/dev/block/mmcblk0p32           u:object_r:userdata_block_device:s0
+
+# TrimArea and debug menu sockets
+/dev/socket/tad                 u:object_r:tad_socket:s0
+/dev/socket/sysdbg              u:object_r:sysdbg_socket:s0
+
+# Services
+/system/bin/ClockworkProxy      u:object_r:clockwork_proxy_exec:s0
+/system/bin/capi2test           u:object_r:capi2test_exec:s0
+/system/bin/taimport            u:object_r:taimport_exec:s0
+/system/bin/sysdbg_service      u:object_r:sysdbg_service_exec:s0
+/system/bin/setup_fs            u:object_r:setup_fs_exec:s0
+/system/bin/key_sleep_vibrate_service u:object_r:key_sleep_vibrate_exec:s0
+/system/bin/glgps               u:object_r:gpsd_exec:s0
+/system/bin/T2tNdefWrite        u:object_r:nfctagmodify_exec:s0
+/system/bin/iddd                u:object_r:idd_exec:s0
+/system/bin/idd-logreader       u:object_r:idd_exec:s0
+/system/bin/crashmonitorns      u:object_r:crashmonitorns_exec:s0
+
+# debug menu client
+/system/bin/sysdbg              u:object_r:sysdbg_exec:s0
+
+# data/idd
+/data/idd                       u:object_r:idd_root_dir:s0
+/data/idd/[^/]*                 u:object_r:idd_data_file:s0
+/data/idd/socket(/.*)?          u:object_r:idd_socket_file:s0
+/data/idd/output(/.*)?          u:object_r:idd_output_file:s0
+/data/idd/fsck(/.*)?            u:object_r:idd_fsck_file:s0
+/data/idd/private(/.*)?         u:object_r:idd_private_file:s0
+
+# data/crashdata
+/data/crashdata(/.*)? u:object_r:crashdata_data_file:s0
+
+# sysfs files
+/sys/devices/virtual/timed_output/vibrator/enable               u:object_r:sysfs_vibrator_writable:s0
+/sys/devices/platform/bcm-bt-rfkill.[0-9]*/rfkill/rfkill0/state u:object_r:sysfs_bluetooth_writable:s0
+/sys/devices/platform/bcm-bt-rfkill.[0-9]*/rfkill/rfkill0/type  u:object_r:sysfs_bluetooth_writable:s0
+/sys/kernel/idd_*                                               u:object_r:sysfs_idd_readable:s0
+/sys/devices/platform/3500d000.i2c/i2c-4/4-0008/bcmpmu_fg.12.auto/power_supply/battery u:object_r:sysfs_battery_writable:s0
+/sys/devices/platform/3500d000.i2c/i2c-4/4-0008/bcmpmu_fg.12.auto/power_supply/battery/fg_factor u:object_r:sysfs_battery_writable:s0
+
+# kernel modules
+/system/lib/modules               u:object_r:modules_dir:s0
+/system/lib/modules/idd_jprobe_* u:object_r:modules_files:s0
+#line 1 "device/sony/tetra/sepolicy/file_contexts"
+#Sensor hub device
+/dev/em718x-0                   u:object_r:sensor_hub_device:s0
+/dev/em718x-wake-0              u:object_r:sensor_hub_device:s0

@@ -1,0 +1,17 @@
+# Add init for sony specific software
+import init.debug.sonyextras.rc
+
+# Always mount debugfs in debug builds
+on early-init
+    mount debugfs debugfs /sys/kernel/debug
+    chmod 0755 /sys/kernel/debug
+
+# Service for debug menu
+service sysdbg /system/bin/sysdbg_service
+    socket sysdbg stream 0666 root system
+    class core
+    user root
+    disabled
+
+on property:dev.bootcomplete=1
+    start sysdbg
