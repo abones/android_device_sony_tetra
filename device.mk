@@ -150,7 +150,7 @@ PRODUCT_COPY_FILES += \
 PRODUCT_PACKAGES += \
         nfc_nci.bcm2079x.default \
         NfcNci \
-        NfcEnabler \
+        NfcSettings \
         Tag \
         com.android.nfc_extras
 
