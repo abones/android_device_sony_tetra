@@ -44,3 +44,5 @@ PRODUCT_DEFAULT_PROPERTY_OVERRIDES += \
     persist.sys.media.use-awesome=true \
     log.tag.AmbientService=DEBUG \
     ro.adb.secure=1
+
+PRODUCT_AAPT_PREF_CONFIG := mdpi
