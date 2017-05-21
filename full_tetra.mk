@@ -12,25 +12,17 @@
 # See the License for the specific language governing permissions and
 # limitations under the License.
 
-#
-# This file is the build configuration for a full Android
-# build for grouper hardware. This cleanly combines a set of
-# device-specific aspects (drivers) with a device-agnostic
-# product configuration (apps).
-#
-
-# Release name
-PRODUCT_RELEASE_NAME := tetra
-
-# Inherit some common CM stuff.
-$(call inherit-product, vendor/cm/config/common_mini_tablet_wifionly.mk)
+$(call inherit-product, $(SRC_TARGET_DIR)/product/aosp_base.mk)
 
 # Inherit device configuration
 $(call inherit-product, device/sony/tetra/device.mk)
 
+# Release name
+PRODUCT_RELEASE_NAME := tetra
+
 ## Device identifier. This must come after all inclusions
+PRODUCT_NAME := full_tetra
 PRODUCT_DEVICE := tetra
-PRODUCT_NAME := cm_tetra
 PRODUCT_BRAND := Sony
 PRODUCT_MODEL := SmartWatch 3
 PRODUCT_MANUFACTURER := Sony
