@@ -35,10 +35,10 @@ OVERRIDE_RS_DRIVER := libRSDriver_adreno.so
 BOARD_KERNEL_CMDLINE := androidboot.selinux=permissive,hi=there
 BOARD_KERNEL_BASE := 0x82000000
 BOARD_KERNEL_PAGESIZE := 2048
-TARGET_KERNEL_SOURCE := kernel/sony/tetra
-TARGET_KERNEL_CONFIG := tetra_stock_defconfig
+#TARGET_KERNEL_SOURCE := kernel/sony/tetra
+#TARGET_KERNEL_CONFIG := tetra_stock_defconfig
 #cyanogenmod_tetra_defconfig
-TARGET_PREBUILT_KERNEL := device/sony/tetra/kernel
+#TARGET_PREBUILT_KERNEL := device/sony/tetra/kernel
 BOARD_KERNEL_IMAGE_NAME := zImage-dtb
 
 BOARD_CANT_BUILD_RECOVERY_FROM_BOOT_PATCH := true

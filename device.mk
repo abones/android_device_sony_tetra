@@ -8,11 +8,15 @@ $(call inherit-product-if-exists, vendor/sony/tetra/tetra-vendor.mk)
 DEVICE_PACKAGE_OVERLAYS += device/sony/tetra/overlay
 
 LOCAL_PATH := device/sony/tetra
+
 ifeq ($(TARGET_PREBUILT_KERNEL),)
-	LOCAL_KERNEL := $(LOCAL_PATH)/kernel
+    LOCAL_KERNEL := $(LOCAL_PATH)/kernel
 else
-	LOCAL_KERNEL := $(TARGET_PREBUILT_KERNEL)
+    LOCAL_KERNEL := $(TARGET_PREBUILT_KERNEL)
 endif
+
+PRODUCT_COPY_FILES := \
+    $(LOCAL_KERNEL):kernel
 
 # etc/permissions
 PRODUCT_COPY_FILES += \
